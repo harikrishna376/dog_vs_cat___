@@ -1,4 +1,53 @@
 import streamlit as st
+
+# --- CUSTOM CSS ---
+st.markdown("""
+    <style>
+    /* Change background and font */
+    .stApp {
+        background-color: #0e1117;
+        color: #ffffff;
+    }
+    
+    /* Style the title */
+    .main-title {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+        background: -webkit-linear-gradient(#00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+    }
+    
+    /* Style the upload box */
+    .stFileUploader {
+        border: 2px dashed #4facfe;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    /* Professional Button */
+    .stButton>button {
+        width: 100%;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        font-weight: bold;
+        border: none;
+        transition: 0.3s;
+    }
+    .stButton>button:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 5px 15px rgba(79, 172, 254, 0.4);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# --- APPLY THE HTML ---
+st.markdown('<h1 class="main-title">AI Pet Classifier</h1>', unsafe_allow_html=True)
+st.write("### Upload a photo and let the neural network decide.")
 import tensorflow as tf
 from tensorflow import keras
 import cv2
