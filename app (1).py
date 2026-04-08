@@ -57,8 +57,6 @@ from PIL import Image
 # Set page title and favicon
 st.set_page_config(page_title="Dog vs Cat Classifier", page_icon="🐾")
 
-st.title("🐾 Dog vs Cat Image Classifier")
-st.write("Upload an image of a dog or a cat to get a prediction!")
 
 # Load the model using st.cache_resource to load it only once
 @st.cache_resource
